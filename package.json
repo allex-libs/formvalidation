@@ -1,0 +1,25 @@
+{
+  "name": "allex_formvalidationlib",
+  "version": "1.0.0",
+  "description": "AllexJS lib with functionality for validating forms",
+  "main": "index.js",
+  "scripts": {
+    "test": "allex-mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allex-libs/formvalidation.git"
+  },
+  "keywords": [
+    "ecosystem:AllexJS",
+    "form",
+    "validation",
+    "lib"
+  ],
+  "author": "Andrija Petrovic <andrija.hers@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allex-libs/formvalidation/issues"
+  },
+  "homepage": "https://github.com/allex-libs/formvalidation#readme"
+}
