@@ -49,7 +49,7 @@ function createFormValidatorMixin (lib, mylib) {
     this.validation = vld;
     return true;
   };
-  FormValidatorMixin.prototype.validateFieldNameWithValue = function (fieldname, value) {
+  FormValidatorMixin.prototype.validateFieldNameWithValue = function (fieldname, value, fieldactual) {
     var validation = this.validation,
       confirmationfields = this.confirmationfields,
       vld;
@@ -62,6 +62,9 @@ function createFormValidatorMixin (lib, mylib) {
     vld = validation[fieldname];
 
     if (!vld) return true;
+    if (vld.onlywhenactual && !fieldactual) {
+      return true;
+    }
     if (!this.validateValueWithJSON(vld.json_schema, value)) return false;
     if (!this.validateValueWithRegExp(vld.regex, value)) return false;
     return this.validateValueWithFunction(vld.custom, value);
